@@ -2,4 +2,4 @@
 Mohamed-kamel LAHRI
 Erwan GENEVE
 Marthe CHARPY
-Tantely RANDRIA
+Maya Diane RANDRIA
