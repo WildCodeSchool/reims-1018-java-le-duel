@@ -1,13 +1,13 @@
 public class DisplayGame{
 
-	public static String displayAccueil() {
+	public static void displayAccueil() {
 		
-		return "Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?";
+		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
 	}
 
-	public static String displayMenu() {
+	public static void displayMenu() {
 		
-		return "1-Jouer \n2-Hall of Fame \n3-Règles du jeu";
+		System.out.println("1-Jouer \n2-Hall of Fame \n3-Règles du jeu");
 	}
 
 	
