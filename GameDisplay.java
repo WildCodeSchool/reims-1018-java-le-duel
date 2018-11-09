@@ -8,4 +8,3 @@ public class GameDisplay{
 		System.out.println("1-Jouer \n2-Hall of Fame \n3-Règles du jeu");
 	}
 }
-
