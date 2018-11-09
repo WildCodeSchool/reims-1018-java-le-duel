@@ -13,5 +13,3 @@ public class Game{
 		int choice= sc.nextInt();
 	}
 }
-
-
