@@ -28,5 +28,11 @@ public class Game{
        		sc.nextLine();
     		}
 		} while (erreur);
+		if (choice == 1){
+			System.out.println("Entre ton nom");
+			String name1 = sc.nextLine();
+			Player player1 = new Player(name1, 50, 30);
+			
+		}
 	}
 }

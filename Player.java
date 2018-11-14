@@ -1,4 +1,4 @@
-public class Joueur
+public class Player
 {
 
 	private String name;
@@ -6,7 +6,7 @@ public class Joueur
 	private int sort;
 
 
-	public Joueur (String name, int life, int sort)
+	public Player (String name, int life, int sort)
 	{
 		this.name=name;
 		this.life=life;
@@ -51,7 +51,7 @@ public class Joueur
 		{
 			this.life= 0;
 		}
-		System.out.println(this.name + " has "+ this.life + " points remaining!")
+		System.out.println(this.name + " has "+ this.life + " points remaining!");
 	}
 
 	public boolean isKo ()
