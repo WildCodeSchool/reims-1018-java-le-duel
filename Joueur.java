@@ -51,7 +51,7 @@ public class Joueur
 		{
 			this.life= 0;
 		}
-		System.out.println(this.name + " has "+ this.life + " points remaining!")
+		System.out.println(this.name + " has "+ this.life + " points remaining!");
 	}
 
 	public boolean isKo ()
