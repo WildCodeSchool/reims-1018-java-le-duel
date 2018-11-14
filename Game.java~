@@ -29,6 +29,15 @@ public class Game{
     		}
 		} while (erreur);
 
+		
+
+		
+
+		
+
+
+
+
 	}
 
 }
