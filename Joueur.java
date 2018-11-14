@@ -3,14 +3,14 @@ public class Joueur
 
 	private String name;
 	private int life;
-	private int attack;
+	private int sort;
 
 
-	public Joueur (String name, int life, int attack)
+	public Joueur (String name, int life, int sort)
 	{
 		this.name=name;
 		this.life=life;
-		this.attack=attack;
+		this.sort=sort;
 	}
 
 	public String getName ()
@@ -33,14 +33,14 @@ public class Joueur
 		this.life=life;
 	}
 
-	public int getAttack ()
+	public int getSort ()
 	{
-		return this.attack;
+		return this.sort;
 	}
 
-	public void setAttack (int attack)
+	public void setSort (int sort)
 	{
-		this.attack=attack;
+		this.sort=sort;
 	}
 
 
