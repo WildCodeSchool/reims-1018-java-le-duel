@@ -11,6 +11,33 @@ public class Game{
 		GameDisplay.menuDisplay();
 		
 		boolean erreur;
+		int choice1 = 0;
+		do {
+    		erreur = false;
+    		
+    		try {
+        		choice1 = sc.nextInt();
+        		if(choice1 < 1 || choice1 > 3){
+    				erreur = true;
+    				System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
+    			}
+        		
+    		} catch (InputMismatchException e) {
+       		erreur = true;
+       		System.out.println("Tu n'as pas rentré un nombre Moldu!!");
+       		sc.nextLine();
+    		}
+		} while (erreur);
+		if (choice == 1){
+			System.out.println("Entre ton nom");
+			String name1 = sc.nextLine();
+			Player player1 = new Player(name1, 50, 30);
+			
+		}
+
+		GameDisplay.spellDisplay();
+
+		boolean erreur;
 		int choice = 0;
 		do {
     		erreur = false;
@@ -28,11 +55,8 @@ public class Game{
        		sc.nextLine();
     		}
 		} while (erreur);
-		if (choice == 1){
-			System.out.println("Entre ton nom");
-			String name1 = sc.nextLine();
-			Player player1 = new Player(name1, 50, 30);
-			
-		}
+		
+
+
 	}
 }
