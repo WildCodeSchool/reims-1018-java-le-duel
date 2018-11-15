@@ -29,7 +29,9 @@ public class Game{
 	}
 	
 	public static void party(){
-		int choice = GameDisplay.partyDisplay();
-		
+		int choice1 = GameDisplay.partyDisplay();
+		Spell spell1 = SpellInit.spellCast(choice1);
+		int choice2 = GameDisplay.partyDisplay();
+		Spell spell2 = SpellInit.spellCast(choice2);
 	}
 }
