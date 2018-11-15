@@ -35,6 +35,33 @@ public class GameDisplay{
 		return choice;
 	}
 	
+	public static int partyDisplay(){
+		System.out.println("Choisis un sort");
+		System.out.println("1 - feudeymon (feu)");
+		System.out.println("2 - aguamenti (eau)");
+		System.out.println("3 - ventus (vent)");
+		
+		boolean erreur;
+		int choice = 0;
+		do {
+    		erreur = false;
+    		
+    		try {
+        		choice = sc.nextInt();
+        		if(choice < 1 || choice > 3){
+    				erreur = true;
+    				System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
+    			}
+        		
+    		} catch (InputMismatchException e) {
+       		erreur = true;
+       		System.out.println("Tu n'as pas rentré un nombre Moldu!!");
+       		sc.nextLine();
+    		}
+		} while (erreur);
+		return choice;
+	}
+	
 	public static void rulesDisplay(){
 		System.out.println("                                   Règles du jeu:\n");	
 		System.out.println("         Dans 'Duel de sorcier' 2 joueurs s'affrontent en jetant des sorts\n");
