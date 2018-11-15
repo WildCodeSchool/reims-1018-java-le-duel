@@ -12,7 +12,7 @@ public class Game{
 		int choice = GameDisplay.menuDisplay();
 		switch(choice){
 			case 1:
-				//GameDisplay.partyDisplay();
+				Game.party();
 				break;
 			case 2:
 				//GameDisplay.hallOfFameDisplay();
@@ -26,5 +26,10 @@ public class Game{
 	public static void rules(){
 		GameDisplay.rulesDisplay();
 		Game.menu();		
+	}
+	
+	public static void party(){
+		int choice = GameDisplay.partyDisplay();
+		
 	}
 }
