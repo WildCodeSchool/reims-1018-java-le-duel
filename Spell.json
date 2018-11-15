@@ -3,18 +3,18 @@
     "id": 1,
     "name": "feudeymon",
     "level": 10,
-    "type": "feu",
+    "type": "feu"
   },
   {
     "id": 1,
     "name": "aguamenti",
     "level": 5,
-    "type": "eau",
+    "type": "eau"
   },
   {
     "id": 1,
     "name": "ventus",
     "level": 3,
-    "type": "vent",
-  },
+    "type": "vent"
+  }
 ]
