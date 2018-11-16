@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "feudeymon",
+    "level": 10,
+    "type": "feu"
+  },
+  {
+    "id": 1,
+    "name": "aguamenti",
+    "level": 5,
+    "type": "eau"
+  },
+  {
+    "id": 1,
+    "name": "ventus",
+    "level": 3,
+    "type": "vent"
+  }
+]
