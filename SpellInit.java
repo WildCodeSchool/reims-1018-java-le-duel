@@ -8,6 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 // Compile : javac -cp .:json-simple-1.1.1.jar Game.java
 // Execute : java -cp .:json-simple-1.1.1.jar Game
 
@@ -17,7 +18,7 @@ public class SpellInit{
 	
 	private ArrayList<Spell> spells;	
 		
-	public void spellCast(){
+	public SpellInit(){
 		
 		this.spells = new ArrayList<Spell>();
 		
@@ -43,12 +44,24 @@ public class SpellInit{
 				JSONObject spellObject = (JSONObject) root.get(i);
 				
 				int spellId = Math.toIntExact((long) spellObject.get("id"));
-				String spellName = (String) spellObejct.get("name");
-				int spellLevel = Math.toIntExact((long) spellObject.get("level"));
-				String spellType = (String) spellObejct.get("type");
+				String spellName = (String) spellObject.get("name");
+				String spellWeakness = (String) spellObject.get("weakness");
+				String spellType = (String) spellObject.get("type");
 				
-				Spell spell = new Spell(spellId, spellName, spellLevel, spellType);
+				Spell spell = new Spell(spellId, spellName, spellWeakness, spellType);
 				this.spells.add(spell);
 			}		
-	}      
+	} 
+
+	public String getSpellType(int choice){
+		Spell spell1= this.spells.get(choice-1);
+		return spell1.getType();		
+	}
+
+	public String getSpellWeakness(int choice){
+		Spell spell1= this.spells.get(choice-1);
+		return spell1.getWeakness();		
+	}
+
+	
 }

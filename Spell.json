@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "feudeymon",
-    "level": 10,
+    "weakness": "eau",
     "type": "feu"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "aguamenti",
-    "level": 5,
+    "weakness": "vent",
     "type": "eau"
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "ventus",
-    "level": 3,
+    "weakness": "feu",
     "type": "vent"
   }
 ]

@@ -2,14 +2,14 @@ public class Spell {
   
     private int id;
     private String name;
-    private int level;
+    private String weakness;
     private String type;
 
 
-    public Spell(int id, String name, int level, String type){
+    public Spell(int id, String name, String weakness, String type){
         this.id = id;
         this.name = name;
-        this.level = level;
+        this.weakness = weakness;
         this.type = type;
     }
 
@@ -25,11 +25,11 @@ public class Spell {
     public void setName(String name){
         this.name = name;
     }
-    public int getLevel(){
-        return this.level;
+    public String getWeakness(){
+        return this.weakness;
     }
-    public void setLevel(int level){
-        this.level = level;
+    public void setWeakness(String weakness){
+        this.weakness = weakness;
     }
     public String getType(){
         return this.type;
