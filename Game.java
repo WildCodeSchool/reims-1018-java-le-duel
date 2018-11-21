@@ -15,7 +15,7 @@ public class Game{
 				Game.party();
 				break;
 			case 2:
-				//GameDisplay.hallOfFameDisplay();
+				Game.hallOfFame();
 				break;
 			case 3:
 				Game.rules();
@@ -28,10 +28,14 @@ public class Game{
 		Game.menu();		
 	}
 	
+	public static void hallOfFame(){
+		GameDisplay.hallOfFameDisplay();
+		Game.menu();		
+	}
+	
 	public static void party(){
 		int choice1 = GameDisplay.partyDisplay();
-		Spell spell1 = SpellInit.spellCast(choice1);
+	
 		int choice2 = GameDisplay.partyDisplay();
-		Spell spell2 = SpellInit.spellCast(choice2);
 	}
 }

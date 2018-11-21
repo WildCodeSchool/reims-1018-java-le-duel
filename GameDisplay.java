@@ -91,4 +91,23 @@ public class GameDisplay{
 		
 		} while (error);
 	}
+	
+	public static void hallOfFameDisplay(){
+		System.out.println("                Work in progress. \n");	
+		System.out.println("Tapez 'LUMOS' pour revenir au menu ");
+		sc.nextLine();
+		boolean error = false;
+		do{
+			error = false;
+			String backMenu = sc.nextLine();
+			backMenu = backMenu.toUpperCase();
+			if(backMenu.equals("LUMOS")){
+				break;
+			} else {
+				System.out.println("Tu ne gagneras pas la coupe de feu comme ça");
+				error = true;
+			}
+		
+		} while (error);
+	}
 }
