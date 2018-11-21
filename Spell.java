@@ -36,20 +36,5 @@ public class Spell {
     }
     public void setType(String type){
         this.type = type;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    }   
 }
