@@ -42,14 +42,14 @@ public class GameDisplay{
 		System.out.println("3 - ventus (vent)");
 		
 		boolean erreur;
-		char[] xx = null;
-		xx = console.readPassword();
-		String num ="" + xx[0];
-		int choice = Integer.parseInt(num);
+		int choice=0;
+		
 		do {
     			erreur = false;
     		
     			try {
+   	 				choice=sc.nextInt();
+   	 				System.out.print("\033[H\033[2J");
         			if(choice < 1 || choice > 3){
     					erreur = true;
     					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
