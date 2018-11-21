@@ -91,6 +91,7 @@ public class GameDisplay{
 			String backMenu = sc.nextLine();
 			backMenu = backMenu.toUpperCase();
 			if(backMenu.equals("EXPELLIARMUS")){
+				System.out.print("\033[H\033[2J");
 				break;
 			} else {
 				System.out.println("Révises tes sorts sang-de-bourbe");
@@ -110,6 +111,7 @@ public class GameDisplay{
 			String backMenu = sc.nextLine();
 			backMenu = backMenu.toUpperCase();
 			if(backMenu.equals("LUMOS")){
+				System.out.print("\033[H\033[2J");
 				break;
 			} else {
 				System.out.println("Tu ne gagneras pas la coupe de feu comme ça");

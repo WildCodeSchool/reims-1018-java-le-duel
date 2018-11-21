@@ -37,7 +37,7 @@ public class Player{
 			return false;
 		}
 		else{
-			System.out.println(this.name+ " is KO !");
+			System.out.println(this.name+ " a été vaporisé!");
 			return true;
 		}
 	}
