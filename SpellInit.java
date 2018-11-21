@@ -14,7 +14,11 @@ public class SpellInit{
 	
 	private static String JSON_SPELL_PATH = "Spell.json";
 	
-	public static Spell spellCast(int choice){
+	private ArrayList<Spell> spells;	
+		
+	public void spellCast(){
+		
+		this.spells = new ArrayList<Spell>();
 		
 		FileReader jsonFile = null;
         try {
@@ -34,16 +38,16 @@ public class SpellInit{
 			}
 			
 			JSONArray root = (JSONArray) jsonParsed;
-			
-			JSONObject spellObject = (JSONObject) root.get(choice - 1);
-			
-			int id = Math.toIntExact((long) spellObject.get("id")); // Math.toIntExact to cast a long 
-    		String name = (String) spellObject.get("name");
-    		int level = Math.toIntExact((long) spellObject.get("level")); // Math.toIntExact to cast a long 
-    		String type = (String) spellObject.get("type");
-    		
-    		Spell spell = new Spell(id, name, level, type);
-    		
-    		return spell;
+			for(int i = 0; i < root.size(); i++){
+				JSONObject spellObject = (JSONObject) root.get(i);
+				
+				int spellId = Math.toIntExact((long) spellObject.get("id"));
+				String spellName = (String) spellObejct.get("name");
+				int spellLevel = Math.toIntExact((long) spellObject.get("level"));
+				String spellType = (String) spellObejct.get("type");
+				
+				Spell spell = new Spell(spellId, spellName, spellLevel, spellType);
+				this.spells.add(spell);
+			}		
 	}      
 }
