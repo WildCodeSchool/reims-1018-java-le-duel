@@ -6,31 +6,29 @@ public class GameDisplay{
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void welcomeDisplay() {		
-    
 		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
 	}
 
 	public static int menuDisplay() {
-    
 		System.out.println("1-Jouer \n2-Hall of Fame \n3-Règles du jeu");
 		
 		boolean erreur;
 		int choice = 0;
 		do {
-    		erreur = false;
+    			erreur = false;
     		
-    		try {
-        		choice = sc.nextInt();
-        		if(choice < 1 || choice > 3){
-    				erreur = true;
-    				System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
-    			}
+    			try {
+        			choice = sc.nextInt();
+        			if(choice < 1 || choice > 3){
+    					erreur = true;
+    					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
+    				}
         		
-    		} catch (InputMismatchException e) {
-       		erreur = true;
-       		System.out.println("Tu n'as pas rentré un nombre Moldu!!");
-       		sc.nextLine();
-    		}
+    			} catch (InputMismatchException e) {
+       				erreur = true;
+       				System.out.println("Tu n'as pas rentré un nombre Moldu!!");
+       				sc.nextLine();
+    			}
 		} while (erreur);
 		return choice;
 	}
@@ -44,20 +42,20 @@ public class GameDisplay{
 		boolean erreur;
 		int choice = 0;
 		do {
-    		erreur = false;
+    			erreur = false;
     		
-    		try {
-        		choice = sc.nextInt();
-        		if(choice < 1 || choice > 3){
-    				erreur = true;
-    				System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
-    			}
+    			try {
+        			choice = sc.nextInt();
+        			if(choice < 1 || choice > 3){
+    					erreur = true;
+    					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
+    				}
         		
-    		} catch (InputMismatchException e) {
-       		erreur = true;
-       		System.out.println("Tu n'as pas rentré un nombre Moldu!!");
-       		sc.nextLine();
-    		}
+    			} catch (InputMismatchException e) {
+       				erreur = true;
+       				System.out.println("Tu n'as pas rentré un nombre Moldu!!");
+       				sc.nextLine();
+    			}
 		} while (erreur);
 		return choice;
 	}
