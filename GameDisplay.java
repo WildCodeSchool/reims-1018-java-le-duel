@@ -1,9 +1,11 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.io.Console;
 
 public class GameDisplay{
 	
 	static Scanner sc = new Scanner(System.in);
+	static Console console = System.console();
 	
 	public static void welcomeDisplay() {		
 		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
@@ -40,12 +42,14 @@ public class GameDisplay{
 		System.out.println("3 - ventus (vent)");
 		
 		boolean erreur;
-		int choice = 0;
+		char[] xx = null;
+		xx = console.readPassword();
+		String num ="" + xx[0];
+		int choice = Integer.parseInt(num);
 		do {
     			erreur = false;
     		
     			try {
-        			choice = sc.nextInt();
         			if(choice < 1 || choice > 3){
     					erreur = true;
     					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
