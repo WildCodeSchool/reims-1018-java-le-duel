@@ -32,6 +32,8 @@ public class Game{
 	
 	public static void party(){
 		var spellInit = new SpellInit();
+		String player1 = GameDisplay.playerDisplay();
+		String player2 = GameDisplay.playerDisplay();
 		int choice1 = GameDisplay.partyDisplay();
 		int choice2 = GameDisplay.partyDisplay();
 		String spellType1 = spellInit.getSpellType(choice1);

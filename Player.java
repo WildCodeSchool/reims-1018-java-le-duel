@@ -1,12 +1,10 @@
 public class Player{
 	private String name;
 	private int life;
-	private int sort;
 
-	public Player (String name, int life, int sort){
+	public Player (String name){
 		this.name=name;
-		this.life=life;
-		this.sort=sort;
+		this.life=3;
 	}
 
 	public String getName (){
@@ -25,16 +23,8 @@ public class Player{
 		this.life=life;
 	}
 
-	public int getSort (){
-		return this.sort;
-	}
-
-	public void setSort (int sort){
-		this.sort=sort;
-	}
-
-	public void takeHit (int hit){
-		this.life=this.life - hit;
+	public void takeHit (){
+		this.life=this.life - 1;
 		if (this.life<=0){
 			this.life= 0;
 		}

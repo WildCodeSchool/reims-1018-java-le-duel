@@ -60,6 +60,12 @@ public class GameDisplay{
 		return choice;
 	}
 	
+	public static String playerDisplay(){
+		System.out.println("Entre ton nom, apprenti sorcier!");
+		String pseudo = sc.next();
+		return pseudo;
+	}
+
 	public static void rulesDisplay(){
 		System.out.println("                                   Règles du jeu:\n");	
 		System.out.println("         Dans 'Duel de sorcier' 2 joueurs s'affrontent en jetant des sorts\n");
