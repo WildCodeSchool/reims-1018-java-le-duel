@@ -1,11 +1,8 @@
 public class Game{
 
-	public static void main (String[] args) {
-		
+	public static void main (String[] args) {		
 		GameDisplay.welcomeDisplay();
-		
 		Game.menu();
-		
 	}
 	
 	public static void menu(){
@@ -46,7 +43,6 @@ public class Game{
 	}
 
 	public static String battle(String spellType1, String spellType2, String spellWeakness1, String spellWeakness2){
-
 		if (spellType1.equals(spellType2)){
 			return "Egalité!";
 		}
