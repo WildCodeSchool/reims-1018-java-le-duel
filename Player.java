@@ -28,7 +28,8 @@ public class Player{
 		if (this.life<=0){
 			this.life= 0;
 		}
-		System.out.println(this.name + " has "+ this.life + " points remaining!");
+		System.out.println(this.name + " perd un point de vie!");
+		System.out.println(this.name + " a encore "+ this.life + " points de vie!");
 	}
 
 	public boolean isKo (){
