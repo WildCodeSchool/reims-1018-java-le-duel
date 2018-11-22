@@ -100,7 +100,8 @@ public class GameDisplay{
 		System.out.println("                                 La terre bat l'eau\n");
 		System.out.println("              Chaque joueur est amené à choisir un sort à tour de rôle.");
 		System.out.println("  Celui dont le sort bat l'autre gagne le duel et fait perdre 1 point de vie à son adversaire");
-		System.out.println("            En cas d'égalité aucun des 2 sorciers ne perd de point de vie.");
+		System.out.println("            Si les 2 sorts choisis sont identiques, aucun des 2 sorciers ne perd de point de vie.");
+System.out.println("            Si aucun des sorts choisis ne surpasse l'autre, les 2 sorciers perdent 1 point de vie.");
 		System.out.println("  Le sorcier qui réduit les points de vie de son adversaire à zéro remporte la partie.\n");
 		System.out.println("Tapez 'ACCIO' pour revenir au menu ");
 		boolean error = false;
