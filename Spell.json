@@ -8,7 +8,7 @@
   {
     "id": 2,
     "name": "aguamenti",
-    "weakness": "vent",
+    "weakness": "terre",
     "type": "eau"
   },
   {
@@ -16,5 +16,17 @@
     "name": "ventus",
     "weakness": "feu",
     "type": "vent"
+  }
+  {
+    "id": 4,
+    "name": "terra",
+    "weakness": "foudre",
+    "type": "terre"
+  }
+  {
+    "id": 5,
+    "name": "fulgerys",
+    "weakness": "vent",
+    "type": "foudre"
   }
 ]
