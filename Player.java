@@ -37,7 +37,7 @@ public class Player{
 			return false;
 		}
 		else{
-			System.out.println(this.name+ " a été vaporisé!");
+			System.out.println(this.name+ " a été vaporisé.e!");
 			return true;
 		}
 	}

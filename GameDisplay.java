@@ -32,6 +32,7 @@ public class GameDisplay{
        				sc.nextLine();
     			}
 		} while (erreur);
+		sc.nextLine();
 		return choice;
 	}
 
@@ -66,9 +67,24 @@ public class GameDisplay{
 
 	public static String playerDisplay(){
 		System.out.println("Entre ton nom, apprenti sorcier!");
-		String pseudo = sc.next();
+		String pseudo = sc.nextLine();
 		return pseudo;
 	}
+
+	public static boolean playAgainDisplay(){
+		System.out.println("Tapez 'Oubliette' pour revenir au menu principal");
+		sc.nextLine();
+		String backMenu = sc.nextLine();
+		backMenu = backMenu.toUpperCase();
+			if(backMenu.equals("OUBLIETTE")){
+				System.out.print("\033[H\033[2J");
+				return true;
+			}
+			else{
+				return false;
+			}
+	}
+
 
 	public static void rulesDisplay(){
 		System.out.println("                                   Règles du jeu:\n");
@@ -79,18 +95,18 @@ public class GameDisplay{
 		System.out.println("                                 Le feu bat le vent");
 		System.out.println("                                 L'eau bat le feu");
 		System.out.println("                                 Le vent bat l'eau\n");
-		System.out.println("              Chaque joueur est amené a choisir un sort à tour de rôle.");
-		System.out.println("  Celui dont le sort bas l'autre gagne le duel et fait perdre 1 point de vie à son adversaire");
-		System.out.println("            En cas d'égalité aucun des 2 sorciers ne perdent de point de vie.");
+		System.out.println("              Chaque joueur est amené à choisir un sort à tour de rôle.");
+		System.out.println("  Celui dont le sort bat l'autre gagne le duel et fait perdre 1 point de vie à son adversaire");
+		System.out.println("            En cas d'égalité aucun des 2 sorciers ne perd de point de vie.");
 		System.out.println("  Le sorcier qui réduit les points de vie de son adversaire à zéro remporte la partie.\n");
-		System.out.println("Tapez 'EXPELLIARMUS' pour revenir au menu ");
+		System.out.println("Tapez 'ACCIO' pour revenir au menu ");
 		sc.nextLine();
 		boolean error = false;
 		do{
 			error = false;
 			String backMenu = sc.nextLine();
 			backMenu = backMenu.toUpperCase();
-			if(backMenu.equals("EXPELLIARMUS")){
+			if(backMenu.equals("ACCIO")){
 				System.out.print("\033[H\033[2J");
 				break;
 			} else {

@@ -46,6 +46,10 @@ public class Game{
 			String spellWeakness2 = spellInit.getSpellWeakness(choice2);
 			Game.battle(spellType1, spellType2, spellWeakness1, spellWeakness2, player1, player2);
 		}
+		boolean again = GameDisplay.playAgainDisplay();
+		if (again){
+			Game.menu();
+		}
 
 	}
 
