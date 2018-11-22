@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "feudeymon",
+    "weakness": "eau",
+    "type": "feu"
+  },
+  {
+    "id": 2,
+    "name": "aguamenti",
+    "weakness": "terre",
+    "type": "eau"
+  },
+  {
+    "id": 3,
+    "name": "ventus",
+    "weakness": "feu",
+    "type": "vent"
+  }
+  {
+    "id": 4,
+    "name": "terra",
+    "weakness": "foudre",
+    "type": "terre"
+  }
+  {
+    "id": 5,
+    "name": "fulgerys",
+    "weakness": "vent",
+    "type": "foudre"
+  }
+]
