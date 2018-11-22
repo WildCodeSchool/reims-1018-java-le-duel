@@ -3,29 +3,29 @@ import java.util.InputMismatchException;
 import java.io.Console;
 
 public class GameDisplay{
-	
+
 	static Scanner sc = new Scanner(System.in);
 	static Console console = System.console();
-	
-	public static void welcomeDisplay() {		
+
+	public static void welcomeDisplay() {
 		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
 	}
 
 	public static int menuDisplay() {
 		System.out.println("1-Jouer \n2-Hall of Fame \n3-Règles du jeu");
-		
+
 		boolean erreur;
 		int choice = 0;
 		do {
     			erreur = false;
-    		
+
     			try {
         			choice = sc.nextInt();
         			if(choice < 1 || choice > 3){
     					erreur = true;
     					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
     				}
-        		
+
     			} catch (InputMismatchException e) {
        				erreur = true;
        				System.out.println("Tu n'as pas rentré un nombre Moldu!!");
@@ -34,19 +34,19 @@ public class GameDisplay{
 		} while (erreur);
 		return choice;
 	}
-	
-	public static int partyDisplay(){
-		System.out.println("Choisis un sort");
+
+	public static int partyDisplay(String playerName){
+		System.out.println(playerName + ", choisis un sort");
 		System.out.println("1 - feudeymon (feu)");
 		System.out.println("2 - aguamenti (eau)");
 		System.out.println("3 - ventus (vent)");
-		
+
 		boolean erreur;
 		int choice=0;
-		
+
 		do {
     			erreur = false;
-    		
+
     			try {
    	 				choice=sc.nextInt();
    	 				System.out.print("\033[H\033[2J");
@@ -54,7 +54,7 @@ public class GameDisplay{
     					erreur = true;
     					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
     				}
-        		
+
     			} catch (InputMismatchException e) {
        				erreur = true;
        				System.out.println("Tu n'as pas rentré un nombre Moldu!!");
@@ -63,7 +63,7 @@ public class GameDisplay{
 		} while (erreur);
 		return choice;
 	}
-	
+
 	public static String playerDisplay(){
 		System.out.println("Entre ton nom, apprenti sorcier!");
 		String pseudo = sc.next();
@@ -71,7 +71,7 @@ public class GameDisplay{
 	}
 
 	public static void rulesDisplay(){
-		System.out.println("                                   Règles du jeu:\n");	
+		System.out.println("                                   Règles du jeu:\n");
 		System.out.println("         Dans 'Duel de sorcier' 2 joueurs s'affrontent en jetant des sorts\n");
 		System.out.println("                     Chaque sorcier dispose de 3 points de vie\n");
 		System.out.println("                            Il existe 3 types de sorts.");
@@ -82,7 +82,7 @@ public class GameDisplay{
 		System.out.println("              Chaque joueur est amené a choisir un sort à tour de rôle.");
 		System.out.println("  Celui dont le sort bas l'autre gagne le duel et fait perdre 1 point de vie à son adversaire");
 		System.out.println("            En cas d'égalité aucun des 2 sorciers ne perdent de point de vie.");
-		System.out.println("  Le sorcier qui réduit les points de vie de son adversaire à zéro remporte la partie.\n");	
+		System.out.println("  Le sorcier qui réduit les points de vie de son adversaire à zéro remporte la partie.\n");
 		System.out.println("Tapez 'EXPELLIARMUS' pour revenir au menu ");
 		sc.nextLine();
 		boolean error = false;
@@ -97,12 +97,12 @@ public class GameDisplay{
 				System.out.println("Révises tes sorts sang-de-bourbe");
 				error = true;
 			}
-		
+
 		} while (error);
 	}
-	
+
 	public static void hallOfFameDisplay(){
-		System.out.println("                Work in progress. \n");	
+		System.out.println("                Work in progress. \n");
 		System.out.println("Tapez 'LUMOS' pour revenir au menu ");
 		sc.nextLine();
 		boolean error = false;
@@ -117,7 +117,7 @@ public class GameDisplay{
 				System.out.println("Tu ne gagneras pas la coupe de feu comme ça");
 				error = true;
 			}
-		
+
 		} while (error);
 	}
 }
