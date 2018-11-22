@@ -1,9 +1,11 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.io.Console;
 
 public class GameDisplay{
 	
 	static Scanner sc = new Scanner(System.in);
+	static Console console = System.console();
 	
 	public static void welcomeDisplay() {		
 		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
@@ -40,12 +42,14 @@ public class GameDisplay{
 		System.out.println("3 - ventus (vent)");
 		
 		boolean erreur;
-		int choice = 0;
+		int choice=0;
+		
 		do {
     			erreur = false;
     		
     			try {
-        			choice = sc.nextInt();
+   	 				choice=sc.nextInt();
+   	 				System.out.print("\033[H\033[2J");
         			if(choice < 1 || choice > 3){
     					erreur = true;
     					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
@@ -60,6 +64,12 @@ public class GameDisplay{
 		return choice;
 	}
 	
+	public static String playerDisplay(){
+		System.out.println("Entre ton nom, apprenti sorcier!");
+		String pseudo = sc.next();
+		return pseudo;
+	}
+
 	public static void rulesDisplay(){
 		System.out.println("                                   Règles du jeu:\n");	
 		System.out.println("         Dans 'Duel de sorcier' 2 joueurs s'affrontent en jetant des sorts\n");
@@ -81,6 +91,7 @@ public class GameDisplay{
 			String backMenu = sc.nextLine();
 			backMenu = backMenu.toUpperCase();
 			if(backMenu.equals("EXPELLIARMUS")){
+				System.out.print("\033[H\033[2J");
 				break;
 			} else {
 				System.out.println("Révises tes sorts sang-de-bourbe");
@@ -100,6 +111,7 @@ public class GameDisplay{
 			String backMenu = sc.nextLine();
 			backMenu = backMenu.toUpperCase();
 			if(backMenu.equals("LUMOS")){
+				System.out.print("\033[H\033[2J");
 				break;
 			} else {
 				System.out.println("Tu ne gagneras pas la coupe de feu comme ça");

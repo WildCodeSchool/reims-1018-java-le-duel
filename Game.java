@@ -32,28 +32,36 @@ public class Game{
 	
 	public static void party(){
 		var spellInit = new SpellInit();
-		int choice1 = GameDisplay.partyDisplay();
-		int choice2 = GameDisplay.partyDisplay();
-		String spellType1 = spellInit.getSpellType(choice1);
-		String spellType2= spellInit.getSpellType(choice2);
-		String spellWeakness1 = spellInit.getSpellWeakness(choice1);
-		String spellWeakness2= spellInit.getSpellWeakness(choice2);
-		String result = Game.battle(spellType1, spellType2, spellWeakness1, spellWeakness2);
-		System.out.println(result);
+		String player1Name = GameDisplay.playerDisplay();
+		String player2Name = GameDisplay.playerDisplay();
+		Player player1 = new Player(player1Name);
+		Player player2 = new Player(player2Name);
+		//boucle
+		while(!player1.isKo() && !player2.isKo()){
+			int choice1 = GameDisplay.partyDisplay();
+			int choice2 = GameDisplay.partyDisplay();
+			String spellType1 = spellInit.getSpellType(choice1);
+			String spellType2 = spellInit.getSpellType(choice2);
+			String spellWeakness1 = spellInit.getSpellWeakness(choice1);
+			String spellWeakness2 = spellInit.getSpellWeakness(choice2);
+			Game.battle(spellType1, spellType2, spellWeakness1, spellWeakness2, player1, player2);
+		}	
+		
 	}
 
-	public static String battle(String spellType1, String spellType2, String spellWeakness1, String spellWeakness2){
+	public static void battle(String spellType1, String spellType2, String spellWeakness1, String spellWeakness2, Player player1, Player player2){
 		if (spellType1.equals(spellType2)){
-			return "Egalité!";
+			System.out.println("Aucun des joueurs ne perd de point de vie");
 		}
-		if (spellType1.equals(spellWeakness2)){
-			return "Joueur 1 remporte le duel";
+		else if (spellType1.equals(spellWeakness2)){
+			player2.takeHit();
 		}
-		if (spellType2.equals(spellWeakness1)){
-			return "Joueur 2 remporte le duel!";
+		else if (spellType2.equals(spellWeakness1)){
+			player1.takeHit();
 		}
 		else{
-			return "BOOM! Les 2 joueurs sont à terre!";
+			player1.takeHit();
+			player2.takeHit();
 		}
 	}
 }
