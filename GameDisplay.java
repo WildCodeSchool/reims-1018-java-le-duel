@@ -5,7 +5,6 @@ import java.io.Console;
 public class GameDisplay{
 
 	static Scanner sc = new Scanner(System.in);
-	static Console console = System.console();
 
 	public static void welcomeDisplay() {
 		System.out.println("Bienvenue à la taverne des Gobelins Fringants!!! \nEtes-vous prêts à entamer un terrrrrrible duel de sorciers?");
@@ -41,6 +40,8 @@ public class GameDisplay{
 		System.out.println("1 - feudeymon (feu)");
 		System.out.println("2 - aguamenti (eau)");
 		System.out.println("3 - ventus (vent)");
+		System.out.println("4 - terra (terre)");
+		System.out.println("5 - fulgerys (foudre)");
 
 		boolean erreur;
 		int choice=0;
@@ -51,9 +52,9 @@ public class GameDisplay{
     			try {
    	 				choice=sc.nextInt();
    	 				System.out.print("\033[H\033[2J");
-        			if(choice < 1 || choice > 3){
+        			if(choice < 1 || choice > 5){
     					erreur = true;
-    					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 3 PETIT TROLL");
+    					System.out.println("ON T'A DIT METTRE UN NOMBRE ENTRE 1 et 5 PETIT TROLL");
     				}
 
     			} catch (InputMismatchException e) {
@@ -90,17 +91,18 @@ public class GameDisplay{
 		System.out.println("                                   Règles du jeu:\n");
 		System.out.println("         Dans 'Duel de sorcier' 2 joueurs s'affrontent en jetant des sorts\n");
 		System.out.println("                     Chaque sorcier dispose de 3 points de vie\n");
-		System.out.println("                            Il existe 3 types de sorts.");
-		System.out.println("                             Le feu, l' eau et le vent");
+		System.out.println("                            Il existe 5 types de sorts.");
+		System.out.println("                             Le feu, l' eau, le vent, la terre et la foudre");
 		System.out.println("                                 Le feu bat le vent");
 		System.out.println("                                 L'eau bat le feu");
-		System.out.println("                                 Le vent bat l'eau\n");
+		System.out.println("                                 Le vent bat la foudre");
+		System.out.println("                                 La foudre bat la terre");
+		System.out.println("                                 La terre bat l'eau\n");
 		System.out.println("              Chaque joueur est amené à choisir un sort à tour de rôle.");
 		System.out.println("  Celui dont le sort bat l'autre gagne le duel et fait perdre 1 point de vie à son adversaire");
 		System.out.println("            En cas d'égalité aucun des 2 sorciers ne perd de point de vie.");
 		System.out.println("  Le sorcier qui réduit les points de vie de son adversaire à zéro remporte la partie.\n");
 		System.out.println("Tapez 'ACCIO' pour revenir au menu ");
-		sc.nextLine();
 		boolean error = false;
 		do{
 			error = false;
@@ -120,7 +122,6 @@ public class GameDisplay{
 	public static void hallOfFameDisplay(){
 		System.out.println("                Work in progress. \n");
 		System.out.println("Tapez 'LUMOS' pour revenir au menu ");
-		sc.nextLine();
 		boolean error = false;
 		do{
 			error = false;

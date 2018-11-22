@@ -25,7 +25,7 @@ public class Player{
 
 	public void takeHit (){
 		this.life=this.life - 1;
-		if (this.life<=0){
+		if (this.life<0){
 			this.life= 0;
 		}
 		System.out.println(this.name + " perd un point de vie!");

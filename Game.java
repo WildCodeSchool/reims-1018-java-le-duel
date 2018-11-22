@@ -37,7 +37,7 @@ public class Game{
 		Player player1 = new Player(player1Name);
 		Player player2 = new Player(player2Name);
 		//boucle
-		while(!player1.isKo() && !player2.isKo()){
+		while(player1.getLife() > 0 && player2.getLife() > 0){
 			int choice1 = GameDisplay.partyDisplay(player1Name);
 			int choice2 = GameDisplay.partyDisplay(player2Name);
 			String spellType1 = spellInit.getSpellType(choice1);
@@ -46,6 +46,9 @@ public class Game{
 			String spellWeakness2 = spellInit.getSpellWeakness(choice2);
 			Game.battle(spellType1, spellType2, spellWeakness1, spellWeakness2, player1, player2);
 		}
+		player1.isKo();
+		player2.isKo();
+
 		boolean again = GameDisplay.playAgainDisplay();
 		if (again){
 			Game.menu();
