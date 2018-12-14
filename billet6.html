@@ -37,41 +37,46 @@
   <div class="container">
     <h2>Voici notre 3ème et dernière semaine de projet en JEE</h2>
     <p>
-     La cinquième du semaine se termine par l'ajout de pages sur le même modèle MVC que la semaine passée, ou nous avons pu ajouter les noms 
-     de sorts grâce au fichier JSON,le choix aux deux joueurs d'entrer leur nom, la visualisation des règles, et la redirection vers le "Hall of Fame" qui n'est pas encore fonctionnel.
-     Malheureusement, les soucis que nous avons rencontrés comme l'impossibilité de compiler après avoir importés les objets de sort JSON, nous ont contraint  
-     à modifier notre façon de coder. Dû a un manque de temps, nous avons décidés de creer les sorts directement dans le fichier JAVA afin de rendre un projet
-     fonctionnel et présentable.    
+       Les difficultés que nous avons rencontrés la semaine dernière ont été fixés. Nous avons reussi à réintegrer le fichier JSON a notre projet, qui été mis en ligne, 
+       et nous avons également integrés de nombreuses fonctionnalités au code.
+       L'ajout de fond d'écran, d'images représentant les joueurs, de boutons ergonomiquement plus pratique, de nouveaux sort, et surtout d'une voix !
+       En effet, nous avions contactés le celebre comédien Pierre-Alain de Guarrigues (https://twitter.com/padg_officiel) avec plus de 35000 enregistrements 
+       en 28 ans de carrière et qui a eu l'extrême gentillesse de nous avoir preté sa voix gratuitement pour notre jeu ! 
+
+       Les joueurs pourront ainsi entendre "Bienvenue a la Taverne du Gobelin Fringuant !" avec la même voix que les Nains dans l'univers fantastique.
     </p>
 
-    <p> Ici,deux captures d'écran du choix des pseudos ainsi que des sorts proposés : </p>
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-42-01.png" class="img-rounded" alt="image menu" width="40%" height="200%">
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-42-13.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+    <p> Ici,deux captures d'écran de l'accueil avec le menu, ainsi que du choix des pseudos par les joueurs : </p>
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784126-capture-d-ecran-de-2018-12-14-11-30-10.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784126-capture-d-ecran-de-2018-12-14-11-36-59.png" class="img-rounded" alt="image menu" width="40%" height="200%">
     
     <p>
-      Nous avons rajoutés une balise de type Modal (Fênetre), permettant aux joueurs de choisir un sort en cliquant sur "Choisis ton sort!", et qui, par la même occasion
-      les empeche de regarder ce que l'autre joueur a choisi après avoir fermé la fenêtre de choix de sort.
+      Une fois les noms de sorciers rentrés, chaque joueur se voit attribuer une image de sorcière, l'une des ténèbres, l'une de la lumière, ainsi que 6 points de vie chacun.
+      Chaque joueur aura besoin de cliquer sur son image, ou une fenêtre apparaîtra, avec 5 choix de sorts : Le feu, L'eau, La terre, La nature, le Metal.
+      Une fois que le joueur aura choisi son sort, il n'aura qu'a cliquer sur "fermer" ou bien tout simplement cliquer a l'exterieur de la fênetre pour qu'elle se ferme et le second joueur pourra choisir son sort et faire de même après.
+      Les deux joueurs ayant choisis leur sort, il pourront cliquer sur "Lancer" afin de determiner le gagnant. Nous avons également mis un systeme de sort nourrissant : 
+      Si le sorcier1 choisi le sort d'Eau, et le sorcier2 choisi le sort de Feu, alors l'Eau est destructeur du feu et le sorcier 2 subira 1 point de dégats.
+      Mais, Si le sorcier1 choisi le sort d'Eau, et le sorcier2 choisi le sort de la Nature, alors la nature se nourri de l'eau, le sorcier1 subira non pas 1 mais 2 points de dégats ! 
     </p>
   
     <p>
-      Force de travail et de perséverance, nous avons reussi a permettre un lancement de partie, et à rendre le jeu fonctionnel avant la semaine finale qui se deroulera la semaine prochaine.
-      Arrivant sur le menu du jeu, les joueurs peuvent maintenant acceder aux règles du jeu, et au Hall of fame (bien qu'ils soient vides de contenu écrit pour l'instant).
-      Les joueurs pourront choisir leur pseudo, puis accéder au choix des sorts.
-      Après avoir choisi leur sort d'attaque, le sort le moins puissant fera perdre 1 point de vie au joueur et le premier joueur a 0 point de vie perdra la partie.
-      Une fois la partie terminée, un message de victoire d'affichera avec le nom du vainqueur.
+
     </p>
-        <p>Exemple de déroulement de duel :</p>
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-42-24.png" class="img-rounded" alt="image menu" width="40%" height="200%">
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-42-37.png" class="img-rounded" alt="image menu" width="40%" height="200%">
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-42-42.png" class="img-rounded" alt="image menu" width="40%" height="200%">
-        <p>Ci dessus, Bob a perdu 1 point de vie car Aguamenti (Eau) est plus fort que Feudeymon (feu).</p>
-        <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176208-capture-d-ecran-de-2018-12-07-10-43-02.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+        <p>Exemple de déroulement de duel avec les nouvelles fonctionnalités:</p>
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784127-capture-d-ecran-de-2018-12-14-11-37-06.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+        <p>L'écran de combat est affiché, les deux joueurs peuvent maintenant choisir un sort : </p>
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784126-capture-d-ecran-de-2018-12-14-11-37-28.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784126-capture-d-ecran-de-2018-12-14-11-37-41.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+        <p>Ci dessous, Harry a perdu 2 point de vie car le sort Terre est moins fort que Metal (Les sort nourriciers dans les règles de jeu).</p>
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784127-capture-d-ecran-de-2018-12-14-11-37-51.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+
+        <p>Capture d'écran de victoire : </p>
+        <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784154-capture-d-ecran-de-2018-12-14-11-38-25.png" class="img-rounded" alt="image menu" width="40%" height="200%">
 
 
 
-    <p>Les 2 captures d'écran avec l'accès au règles du jeu ainsi qu'au Hall of Fame : </p>
-    <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176278-capture-d-ecran-de-2018-12-07-10-43-07.png" class="img-rounded" alt="image menu" width="40%" height="200%">
-    <img src="http://image.noelshack.com/fichiers/2018/49/5/1544176278-capture-d-ecran-de-2018-12-07-10-43-11.png" class="img-rounded" alt="image menu" width="40%" height="200%">
+    <p>La capture d'écran avec l'accès au règles du jeu : </p>
+    <img src="http://image.noelshack.com/fichiers/2018/50/5/1544784154-capture-d-ecran-de-2018-12-14-11-38-35.png" class="img-rounded" alt="image menu" width="40%" height="200%">
     <footer>
       <hr></hr>
       <p> Réalisé par :
